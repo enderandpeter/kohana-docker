@@ -3,7 +3,7 @@ MAINTAINER Spencer Williams <spencer@aninternetpresence.net>
 
 RUN a2enmod rewrite && apt-get update && apt-get install --yes \ 
   ca-certificates git vim mariadb-client libpng12-dev libmcrypt-dev libmagic-dev libcurl4-openssl-dev && \
-  docker-php-ext-install mysql mysqli pdo_mysql gd mcrypt && \
+  docker-php-ext-install mysql mysqli pdo_mysql gd mcrypt mbstring && \
   yes | pecl install pecl_http-1.7.6 && \
   echo 'extension=http.so' >> /usr/local/etc/php/conf.d/pecl_http.ini
   
